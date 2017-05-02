@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Admin</title>
+   <%= stylesheet_link_tag('application',:media=>'all')%>
+  </head>
+
+  <body>
+    <div id="header">
+      <p><h2>Simple Course Management</h2></p>
+  </div>
+  <div id="main">
+    <% if !flash[:notice].blank? %>
+    <div class="notice">
+      <%=flash[:notice]%>
+    </div>
+    <%end%>
+</div>
+    <%= yield %>
+    <div id="footer">
+      <p>@copy of up@gmail.com</p>
+
+    </div>
+  </body>
+</html>

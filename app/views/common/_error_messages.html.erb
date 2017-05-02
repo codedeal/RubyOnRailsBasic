@@ -1,0 +1,11 @@
+<% if object && object.errors.size > 0 %>
+<div id="errorExplain">
+<h2><%= pluralize(object.errors.size,"error")%>prohibited to save... :)</h2>
+<p>Problem with some fields</p>
+<ul>
+  <% object.errors.full_messages.each do|msg|%>
+<li><%=msg%></li>
+<%end%>
+</ul>
+</div>
+<%end%>

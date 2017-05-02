@@ -1,0 +1,14 @@
+
+<%=link_to("<<Back to List",{:action=>'index'})%>
+<div>
+<h2>Create Subjects</h2>
+<%= form_for(:subject, :url=>{:action => 'create'}) do |f| %>
+<%=render(:partial=>"form", :locals=>{:f=>f}) %>
+<!-- here we use partial keyword and f is objeject of partial which will assigned to full one -->
+<div>
+  <%=submit_tag("create Subject")%>
+</div>
+<%end%>
+
+
+</div>

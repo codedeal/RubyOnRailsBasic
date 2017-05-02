@@ -1,0 +1,33 @@
+
+
+<div class="subject index">
+<h2>Subjects</h2>
+<%= %>
+<%= link_to(image_tag('plus', :size=> '.4*.4', :alt=>'+')+"add new subject",{:action =>'new'},:class=>'action new')%>
+<table summary="subject lists">
+  <tr>
+      <th>&nbsp;</th>
+      <th>Subject</th>
+      <th>Visible</th>
+      <th>Pages</th>
+      <th>Action</th>
+  </tr>
+  <% @subjects.each do|subject| %>
+  <tr>
+    <td><%= subject.position %></td>
+    <td><%= subject.name %></td>
+    <td><%= subject.visible ? 'YES' : 'NO' %></td>
+    <td><%= subject.page.size%></td>
+    <td>
+      <%= link_to("Show", {:action=> 'show', :id =>subject.id},:class=>'action show')%>
+      <%= link_to("Edit", {:action=> 'edit', :id=>subject.id},:class=>'action edit')%>
+      <%= link_to("delete", {:action=> 'delete', :id=>subject.id},:class=>'action delete')%>
+
+    </td>
+
+
+  </tr>
+  <% end %>
+</table>
+
+</div>

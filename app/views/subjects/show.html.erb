@@ -1,0 +1,27 @@
+
+<%=link_to("<<Back to List",{:action=>'index'})%>
+<div>
+  <h2>Show Subjects</h2>
+  <table border=1 summary="subject detail view">
+    <tr>
+      <th>Name</th>
+      <td><%= @subject.name %></td>
+    </tr>
+    <tr>
+      <th>Position</th>
+      <td><%= @subject.position %></td>
+    </tr>
+    <tr>
+      <th>Visble</th>
+      <td><%= @subject.visible ? 'YES' : 'NO' %></td>
+    </tr>
+    <tr>
+      <th>Created</th>
+      <td><%= @subject.created_at %></td>
+    </tr>
+    <tr>
+      <th>Updated</th>
+      <td><%= @subject.updated_at %></td>
+    </tr>
+  </table>
+</div>

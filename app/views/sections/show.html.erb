@@ -1,0 +1,36 @@
+
+<%=link_to("<<Back to List",{:action=>'index'})%>
+<div>
+  <h2>Show Sections</h2>
+  <table border=1 summary="section detail view">
+    <tr>
+      <th>Name</th>
+      <td><%= @section.name %></td>
+    </tr>
+    <tr>
+      <th>Position</th>
+      <td><%= @section.position %></td>
+    </tr>
+    <tr>
+      <th>Visble</th>
+      <td><%= @section.visible ? 'YES' : 'NO' %></td>
+    </tr>
+    <tr>
+      <th>content</th>
+      <td><%= @section.content %></td>
+    </tr>
+    <tr>
+      <th>content Type</th>
+      <td><%= @section.content_type %></td>
+    </tr>
+
+    <tr>
+      <th>Created</th>
+      <td><%= @section.created_at %></td>
+    </tr>
+    <tr>
+      <th>Updated</th>
+      <td><%= @section.updated_at %></td>
+    </tr>
+  </table>
+</div>
